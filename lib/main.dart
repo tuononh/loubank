@@ -96,48 +96,37 @@ class _MainWidgetState extends State<MainWidget> {
         Container(
           decoration: BoxDecoration(color: LouColors.screen_bg),
         ),
-        Container(
-          width: double.infinity,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Image.asset(ImageAssets.BG_DECOR_1),
-            ],
-          ),
+        Positioned(
+          top: 0,
+          right: 0,
+          child: Image.asset(ImageAssets.BG_DECOR_1),
         ),
-        Container(
-          width: double.infinity,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Expanded(
-                child: Container(),
-              ),
-              Image.asset(ImageAssets.BG_DECOR_2),
-            ],
-          ),
+        Positioned(
+          bottom: 0,
+          left: 0,
+          child: Image.asset(ImageAssets.BG_DECOR_2),
         ),
         Scaffold(
           backgroundColor: Colors.transparent,
           body: Stack(
             children: [
               _screens.elementAt(_selectedIndex).screenWidget,
-              Column(
-                children: [
-                  Expanded(child: Container()),
-                  Container(
-                    height: LouDimens.bottom_bar_border_radius,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        topLeft:
-                            Radius.circular(LouDimens.bottom_bar_border_radius),
-                        topRight:
-                            Radius.circular(LouDimens.bottom_bar_border_radius),
-                      ),
-                      color: LouColors.bottombar_bg,
+              Positioned(
+                bottom: 0,
+                left: 0,
+                right: 0,
+                child: Container(
+                  height: LouDimens.bottom_bar_border_radius,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                      topLeft:
+                          Radius.circular(LouDimens.bottom_bar_border_radius),
+                      topRight:
+                          Radius.circular(LouDimens.bottom_bar_border_radius),
                     ),
+                    color: LouColors.bottombar_bg,
                   ),
-                ],
+                ),
               ),
             ],
           ),

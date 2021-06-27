@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:loubank/common_widgets/currency_price.dart';
 import 'package:loubank/common_widgets/loan_item.dart';
 import 'package:loubank/constants/colors.dart';
@@ -153,6 +154,7 @@ class _AdditionalInfoWidgetState extends State<AdditionalInfoWidget>
               ),
             ),
             onTap: () {
+              HapticFeedback.mediumImpact();
               if (isLoanListCollapsed) {
                 loanListCollapseController.forward(from: 0);
                 setState(() {
@@ -208,6 +210,7 @@ class _AdditionalInfoWidgetState extends State<AdditionalInfoWidget>
               ),
             ),
             onTap: () {
+              HapticFeedback.mediumImpact();
               if (isCurrencyListCollapsed) {
                 currencyListCollapseController.forward(from: 0);
                 setState(() {
