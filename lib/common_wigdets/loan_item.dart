@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:loubank/constants/colors.dart';
 import 'package:loubank/constants/dimens.dart';
 import 'package:loubank/constants/image_assets.dart';
+import 'package:loubank/localization/language_manager.dart';
 import 'package:loubank/redux/modals/loan_state.dart';
 
 class LoanItemWidget extends StatelessWidget {
@@ -37,7 +38,7 @@ class LoanItemWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Account № ${loan.accountNo}',
+                  locale.language.account_no(loan.accountNo),
                   style: TextStyle(
                     fontSize: LouDimens.font_size_normal,
                     color: LouColors.white,

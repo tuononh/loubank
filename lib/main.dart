@@ -5,6 +5,7 @@ import 'package:loubank/constants/image_assets.dart';
 import 'package:loubank/constants/colors.dart';
 import 'package:loubank/constants/dimens.dart';
 import 'package:loubank/constants/theme.dart';
+import 'package:loubank/localization/language_manager.dart';
 import 'package:loubank/pages/home/home.dart';
 import 'package:loubank/redux/app_epic.dart';
 import 'package:loubank/redux/app_state.dart';
@@ -29,7 +30,6 @@ class LouApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: Colors.white,
       statusBarBrightness: Brightness.dark,
     ));
 
@@ -81,6 +81,12 @@ class _MainWidgetState extends State<MainWidget> {
     setState(() {
       _selectedIndex = index;
     });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    locale.init();
   }
 
   @override
@@ -144,7 +150,7 @@ class _MainWidgetState extends State<MainWidget> {
   Widget _buildBottomBar() {
     return Container(
       padding: EdgeInsets.only(top: 6, left: 35, right: 35),
-      height: 63,
+      height: 62,
       decoration: BoxDecoration(
         color: LouColors.bottombar_bg,
       ),

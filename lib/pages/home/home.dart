@@ -6,6 +6,8 @@ import 'package:loubank/common_wigdets/utility_item.dart';
 import 'package:loubank/constants/colors.dart';
 import 'package:loubank/constants/dimens.dart';
 import 'package:loubank/constants/image_assets.dart';
+import 'package:loubank/helpers.dart/currency.dart';
+import 'package:loubank/localization/language_manager.dart';
 import 'package:loubank/pages/home/additional_info_widget.dart';
 import 'package:loubank/pages/home/card_list_widget.dart';
 import 'package:loubank/pages/home/home_viewmodel.dart';
@@ -78,7 +80,7 @@ class HomePage extends StatelessWidget {
             left: LouDimens.horizon_padding_screen,
           ),
           child: Text(
-            'Finance'.toUpperCase(),
+            locale.language.finance.toUpperCase(),
             style: TextStyle(
               fontSize: 10,
               height: 14 / 10,
@@ -118,7 +120,7 @@ class HomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Your balance',
+                  locale.language.your_balance,
                   style: TextStyle(
                     fontSize: LouDimens.font_size_normal,
                     color: LouColors.white,
@@ -127,7 +129,8 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  '${viewModel.currency} ${NumberFormat.currency(locale: 'en_US', symbol: '', decimalDigits: 0).format(viewModel.balance)}',
+                  CurrencyHelper.formatDisplay(
+                      viewModel.currency, viewModel.balance),
                   style: TextStyle(
                     fontSize: LouDimens.font_size_big,
                     color: LouColors.white,
@@ -163,19 +166,19 @@ class HomePage extends StatelessWidget {
   Widget _buildUtilities() {
     List<UtilityItem> itemList = [
       UtilityItem(
-          title: 'My bonuses',
+          title: locale.language.my_bonuses,
           iconBgColor: Color(0xFFF2FE8D),
           iconPath: ImageAssets.ICON_STAR),
       UtilityItem(
-          title: 'My budget',
+          title: locale.language.my_budget,
           iconBgColor: Color(0xFFB2D0CE),
           iconPath: ImageAssets.ICON_WALLET),
       UtilityItem(
-          title: 'Finance analysis',
+          title: locale.language.finance_analysis,
           iconBgColor: Color(0xFFAA9EB7),
           iconPath: ImageAssets.ICON_CHART),
       UtilityItem(
-          title: 'Finance analysis',
+          title: locale.language.finance_analysis,
           iconBgColor: Color(0xFFF2FE8D),
           iconPath: ImageAssets.ICON_CHART),
     ];

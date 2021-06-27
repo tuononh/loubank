@@ -5,6 +5,7 @@ import 'package:loubank/common_wigdets/loan_item.dart';
 import 'package:loubank/constants/colors.dart';
 import 'package:loubank/constants/dimens.dart';
 import 'package:loubank/constants/image_assets.dart';
+import 'package:loubank/localization/language_manager.dart';
 import 'package:loubank/redux/modals/currency_state.dart';
 import 'package:loubank/redux/modals/loan_state.dart';
 
@@ -123,7 +124,7 @@ class _AdditionalInfoWidgetState extends State<AdditionalInfoWidget>
                   ),
                   Expanded(
                     child: Text(
-                      'Current loans'.toUpperCase(),
+                      locale.language.current_loans.toUpperCase(),
                       style: TextStyle(
                         fontSize: 10,
                         height: 14 / 10,
