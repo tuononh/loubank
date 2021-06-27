@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:intl/intl.dart';
 import 'package:loubank/common_wigdets/utility_item.dart';
 import 'package:loubank/constants/colors.dart';
 import 'package:loubank/constants/dimens.dart';
 import 'package:loubank/constants/image_assets.dart';
-import 'package:loubank/helpers.dart/currency.dart';
+import 'package:loubank/helpers/currency.dart';
 import 'package:loubank/localization/language_manager.dart';
 import 'package:loubank/pages/home/additional_info_widget.dart';
 import 'package:loubank/pages/home/card_list_widget.dart';

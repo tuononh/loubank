@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:loubank/constants/colors.dart';
 import 'package:loubank/constants/dimens.dart';
-import 'package:loubank/helpers.dart/currency.dart';
+import 'package:loubank/helpers/currency.dart';
 import 'package:loubank/redux/modals/currency_state.dart';
 
 class CurrencyItemWidget extends StatelessWidget {
