@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:loubank/common_wigdets/card_lite.dart';
+import 'package:loubank/common_widgets/card_lite.dart';
 import 'package:loubank/constants/dimens.dart';
 import 'package:loubank/redux/modals/card_state.dart';
 

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:loubank/common_wigdets/currency_price.dart';
-import 'package:loubank/common_wigdets/loan_item.dart';
+import 'package:loubank/common_widgets/currency_price.dart';
+import 'package:loubank/common_widgets/loan_item.dart';
 import 'package:loubank/constants/colors.dart';
 import 'package:loubank/constants/dimens.dart';
 import 'package:loubank/constants/image_assets.dart';
